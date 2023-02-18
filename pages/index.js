@@ -1,3 +1,4 @@
+import About from "components/About";
 import Main from "components/Main";
 import Navbar from "components/Navbar";
 import Head from "next/head";
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Main/>
+      <About/>
       {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
     </>
   );

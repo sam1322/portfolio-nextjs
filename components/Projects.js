@@ -25,7 +25,6 @@ const Projects = () => {
       backgroundImg: "/../public/assets/projects/twitch.jpg",
       projectUrl: "/",
     },
-    
   ];
   return (
     <div className="w-full">

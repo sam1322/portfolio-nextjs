@@ -1,32 +1,31 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import ProjectItem from "./ProjectItem";
+import superChat from 'public/assets/projects/superChat.png'
+import AmazonClone from 'public/assets/projects/AmazonClone.png'
+import Advice from 'public/assets/projects/Advice.png'
 
 const Projects = () => {
   const projectList = [
     {
-      title: "Property Finder",
-      backgroundImg: "/../public/assets/projects/property.jpg",
-      // projectUrl: "/property",
-      projectUrl: "/",
+      title: "Super Chat",
+      backgroundImg:superChat, 
+      projectUrl: "https://github.com/sam1322/SuperChat",
+      hostedUrl:"https://superchat-8dbfd.web.app/"
     },
     {
-      title: "Crypto App",
-      backgroundImg: "/../public/assets/projects/crypto.jpg",
-      projectUrl: "/",
+      title: "Amazon Clone",
+      backgroundImg:AmazonClone, 
+      projectUrl: "https://github.com/sam1322/Amazon-clone",
+      hostedUrl:"https://clone-faf47.web.app/"
     },
     {
-      title: "Netflix App",
-      backgroundImg: "/../public/assets/projects/netflix.jpg",
-      projectUrl: "/",
+      title: "Advice",
+      backgroundImg:Advice, 
+      projectUrl: "https://github.com/sam1322/advice_project",
+      hostedUrl:"https://gracious-benz-f77466.netlify.app/"
     },
-    {
-      title: "Twitch App",
-      backgroundImg: "/../public/assets/projects/twitch.jpg",
-      projectUrl: "/",
-    },
-    
-  ];
+   ];
   return (
     <div className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">

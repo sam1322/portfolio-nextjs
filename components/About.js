@@ -4,8 +4,8 @@ import AboutImg from 'public/assets/about.jpg';
 import Image from "next/image";
 const About = () => {
   return (
-    <div className="w-full md:h-screen p-2 flex items-center py-16">
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+    <div id="about" className="w-full md:h-full p-2 flex items-center py-16">
+      <div className="max-w-[1240px] m-auto md:grid grid-cols-2 gap-8">
         <div>
           {/* <div className='col-span-2'> */}
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">About</p>
@@ -23,7 +23,7 @@ const About = () => {
             the best tool for the job.
             <br />I am also familiar with backend technologies such as Java and Springboot.
           </p>
-          <Link href='/projects'>
+          <Link href='/#projects'>
             <p className='py-2 text-gray-600 underline cursor-pointer'>
               Check out some of my latest projects.
             </p>

@@ -6,10 +6,11 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
+import { emailLink, githubLink, linkedInLink } from "constant/projectDetails";
 
 const Contact = () => {
   return (
-    <div className="w-full lg:h-screen">
+    <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full  ">
         <p className="text-xl tracking-widest uppercase text-[#5651E5]">
           Contact
@@ -37,18 +38,33 @@ const Contact = () => {
               <div>
                 <p className="uppercase pt-8">Connect With Me</p>
                 <div className="flex items-center justify-between py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
-                    <FaGithub />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
-                    <AiOutlineMail />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+                  <Link href={linkedInLink}>
+                    <div
+                      title="LinkedIn"
+                      className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 "
+                    >
+                      <FaLinkedinIn />
+                    </div>
+                  </Link>
+                  <Link href={githubLink}>
+                    <div
+                      title="Github"
+                      className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 "
+                    >
+                      <FaGithub />
+                    </div>
+                  </Link>
+                  <Link href={emailLink}>
+                    <div
+                      title="sriram.pant5@gmail.com"
+                      className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 "
+                    >
+                      <AiOutlineMail />
+                    </div>
+                  </Link>
+                  {/* <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                     <BsFillPersonLinesFill />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

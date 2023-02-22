@@ -78,7 +78,7 @@ const Navbar = (props) => {
               </Link>
             ))}
           </ul>
-          <div className="pt-40">
+          {/* <div className="pt-40">
             <p className="uppercase tracking-widest text-[#5651e5]">
               Let&apos;s Connect
             </p>
@@ -92,11 +92,11 @@ const Navbar = (props) => {
               <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                 <AiOutlineMail />
               </div>
-              {/* <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+              <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                 <BsFillPersonLinesFill />
-              </div> */}
+              </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

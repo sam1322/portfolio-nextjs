@@ -49,7 +49,7 @@ const Navbar = (props) => {
         className={
           nav
             ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] lg:hidden h-screen bg-white p-10 ease-in duration-500 "
-            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+            : "fixed left-[-130%] top-0 p-10 ease-in duration-500"
         }
       >
         <div>
@@ -83,7 +83,7 @@ const Navbar = (props) => {
               Let&apos;s Connect
             </p>
             <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-              <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+              <div title="LinkedIn" className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                 <FaLinkedinIn />
               </div>
               <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
@@ -92,9 +92,9 @@ const Navbar = (props) => {
               <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                 <AiOutlineMail />
               </div>
-              <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+              {/* <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                 <BsFillPersonLinesFill />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

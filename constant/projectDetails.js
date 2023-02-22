@@ -40,3 +40,9 @@ export const projectDetailsList = [
     techStack: ["React", "Javascript"],
   },
 ];
+
+export const linkedInLink = "https://in.linkedin.com/in/sriram-pant-6b38bb1ab"
+
+export const githubLink = "https://github.com/sam1322"
+
+export const emailLink = "mailto: sriram.pant5@gmail.com"

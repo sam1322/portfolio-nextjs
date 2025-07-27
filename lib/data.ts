@@ -83,7 +83,18 @@ export const experiences = [
 //   }
 // ]
 
-export const projects = [
+type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  techStack: string[];
+  highlights: string[];
+  github: string;
+  live?: string;
+  color: string;
+}
+export const projects: ProjectType[] = [
   {
     id: 1,
     title: "E-commerce Price Tracker",

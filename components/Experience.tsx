@@ -1,258 +1,11 @@
-// 'use client'
-
-// import { motion } from 'framer-motion'
-// import { Calendar, MapPin, Building2 } from 'lucide-react'
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-// import { Badge } from '@/components/ui/badge'
-// import { experiences } from '@/lib/data'
-
-// export default function Experience() {
-//   return (
-//     <section id="experience" className="py-24">
-//       <div className="container mx-auto">
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           whileInView={{ opacity: 1 }}
-//           transition={{ duration: 0.5 }}
-//           viewport={{ once: true }}
-//           className="space-y-8"
-//         >
-//           <div className="text-center space-y-4">
-//             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Work Experience</h2>
-//             <p className="text-muted-foreground max-w-2xl mx-auto">
-//               My professional journey and the impact I've made
-//             </p>
-//           </div>
-
-//           <div className="relative">
-//             {/* Timeline line */}
-//             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
-
-//             <div className="space-y-8">
-//               {experiences.map((exp, index) => (
-//                 <motion.div
-//                   key={exp.id}
-//                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-//                   whileInView={{ opacity: 1, x: 0 }}
-//                   transition={{ duration: 0.5, delay: index * 0.1 }}
-//                   viewport={{ once: true }}
-//                   className="relative"
-//                 >
-//                   {/* Timeline dot */}
-//                   <div className="absolute left-8 w-4 h-4 bg-primary rounded-full -translate-x-1/2 hidden md:block" />
-
-//                   <Card className="ml-0 md:ml-16">
-//                     <CardHeader>
-//                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-//                         <div className="space-y-1">
-//                           <CardTitle className="text-xl">{exp.position}</CardTitle>
-//                           <CardDescription className="text-base flex items-center gap-2">
-//                             <Building2 className="h-4 w-4" />
-//                             {exp.company}
-//                           </CardDescription>
-//                         </div>
-//                         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-//                           <div className="flex items-center gap-2">
-//                             <Calendar className="h-4 w-4" />
-//                             {exp.duration}
-//                           </div>
-//                           <div className="flex items-center gap-2">
-//                             <MapPin className="h-4 w-4" />
-//                             {exp.location}
-//                           </div>
-//                         </div>
-//                       </div>
-//                     </CardHeader>
-//                     <CardContent>
-//                       <ul className="space-y-3">
-//                         {exp.highlights.map((highlight, i) => (
-//                           <li key={i} className="flex items-start gap-2">
-//                             <span className="text-primary mt-1.5 flex-shrink-0">•</span>
-//                             <span className="text-muted-foreground">{highlight}</span>
-//                           </li>
-//                         ))}
-//                       </ul>
-//                     </CardContent>
-//                   </Card>
-//                 </motion.div>
-//               ))}
-//             </div>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   )
-// }
-
-// 'use client'
-
-// import { motion, useScroll, useTransform } from 'framer-motion'
-// import { Calendar, MapPin, Building2, Briefcase, ChevronRight } from 'lucide-react'
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-// import { Badge } from '@/components/ui/badge'
-// import { experiences } from '@/lib/data'
-// import { useRef } from 'react'
-
-// export default function Experience() {
-//   const ref = useRef<HTMLDivElement>(null)
-//   const { scrollYProgress } = useScroll({
-//     target: ref,
-//     offset: ["start end", "center center"]
-//   })
-
-//   return (
-//     <section id="experience" className="py-24 relative overflow-hidden" ref={ref}>
-//       {/* Background gradient */}
-//       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50/50 to-transparent dark:via-purple-950/20" />
-
-//       <div className="container mx-auto relative">
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           whileInView={{ opacity: 1 }}
-//           transition={{ duration: 0.8 }}
-//           viewport={{ once: true }}
-//           className="space-y-12"
-//         >
-//           {/* Section header */}
-//           <div className="text-center space-y-4">
-//             <motion.div
-//               initial={{ scale: 0 }}
-//               whileInView={{ scale: 1 }}
-//               transition={{ type: "spring", duration: 0.8 }}
-//               viewport={{ once: true }}
-//               className="inline-block"
-//             >
-//               <Badge variant="outline" className="px-4 py-2 text-lg border-blue-200 bg-blue-50 dark:bg-blue-950/50">
-//                 <Briefcase className="w-4 h-4 mr-2" />
-//                 Experience
-//               </Badge>
-//             </motion.div>
-//             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-//               Professional Journey
-//             </h2>
-//             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-//               Building impactful solutions at innovative companies
-//             </p>
-//           </div>
-
-//           <div className="relative max-w-4xl mx-auto">
-//             {/* Animated timeline line */}
-//             <motion.div
-//               className="absolute left-8 md:left-1/2 top-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 md:-translate-x-1/2"
-//               style={{
-//                 height: `${scrollYProgress.get() * 100}%`,
-//                 maxHeight: '100%'
-//               }}
-//             />
-
-//             {/* Static timeline line background */}
-//             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gray-200 dark:bg-gray-700 md:-translate-x-1/2" />
-
-//             <div className="space-y-16">
-//               {experiences.map((exp, index) => {
-//                 const isLeft = index % 2 === 0
-
-//                 return (
-//                   <motion.div
-//                     key={exp.id}
-//                     initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-//                     whileInView={{ opacity: 1, x: 0 }}
-//                     transition={{ duration: 0.8, delay: index * 0.2 }}
-//                     viewport={{ once: true }}
-//                     className={`relative flex items-center ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-//                       }`}
-//                   >
-//                     {/* Timeline dot */}
-//                     <motion.div
-//                       initial={{ scale: 0 }}
-//                       whileInView={{ scale: 1 }}
-//                       transition={{ duration: 0.5, delay: index * 0.2 }}
-//                       viewport={{ once: true }}
-//                       className="absolute left-8 md:left-1/2 w-6 h-6 -translate-x-1/2 md:-translate-x-1/2"
-//                     >
-//                       <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-500 rounded-full animate-pulse" />
-//                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full blur-md" />
-//                     </motion.div>
-
-//                     {/* Content */}
-//                     <div className={`w-full md:w-1/2 ${isLeft ? 'md:pr-12' : 'md:pl-12'} pl-16 md:pl-0`}>
-//                       <motion.div
-//                         whileHover={{ scale: 1.02 }}
-//                         transition={{ type: "spring", stiffness: 300 }}
-//                       >
-//                         <Card className="group hover:shadow-2xl transition-all duration-300 border-2 hover:border-purple-200 dark:hover:border-purple-800 overflow-hidden">
-//                           {/* Gradient overlay on hover */}
-//                           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-blue-500/0 group-hover:from-purple-500/10 group-hover:via-pink-500/10 group-hover:to-blue-500/10 transition-all duration-300" />
-
-//                           <CardHeader className="relative">
-//                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-//                               <div className="space-y-2">
-//                                 <CardTitle className="text-2xl flex items-center gap-2">
-//                                   {exp.position}
-//                                   <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:translate-x-1 transition-transform" />
-//                                 </CardTitle>
-//                                 <CardDescription className="text-lg flex items-center gap-2">
-//                                   <Building2 className="h-4 w-4" />
-//                                   <span className="font-semibold text-purple-600 dark:text-purple-400">
-//                                     {exp.company}
-//                                   </span>
-//                                 </CardDescription>
-//                               </div>
-//                               <div className="flex flex-col gap-2">
-//                                 <Badge variant="secondary" className="flex items-center gap-1 w-fit">
-//                                   <Calendar className="h-3 w-3" />
-//                                   {exp.duration}
-//                                 </Badge>
-//                                 <Badge variant="outline" className="flex items-center gap-1 w-fit">
-//                                   <MapPin className="h-3 w-3" />
-//                                   {exp.location}
-//                                 </Badge>
-//                               </div>
-//                             </div>
-//                           </CardHeader>
-//                           <CardContent className="relative">
-//                             <ul className="space-y-3">
-//                               {exp.highlights.map((highlight, i) => (
-//                                 <motion.li
-//                                   key={i}
-//                                   initial={{ opacity: 0, x: -20 }}
-//                                   whileInView={{ opacity: 1, x: 0 }}
-//                                   transition={{ delay: i * 0.1 }}
-//                                   viewport={{ once: true }}
-//                                   className="flex items-start gap-3"
-//                                 >
-//                                   <span className="text-purple-500 mt-1.5 flex-shrink-0">
-//                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-//                                       <path d="M8 0L10.472 5.528L16 6.472L12 10.472L13.056 16L8 13.056L2.944 16L4 10.472L0 6.472L5.528 5.528L8 0Z" />
-//                                     </svg>
-//                                   </span>
-//                                   <span className="text-muted-foreground leading-relaxed">{highlight}</span>
-//                                 </motion.li>
-//                               ))}
-//                             </ul>
-//                           </CardContent>
-//                         </Card>
-//                       </motion.div>
-//                     </div>
-//                   </motion.div>
-//                 )
-//               })}
-//             </div>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   )
-// }
-
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { Calendar, MapPin, Building2, Briefcase, ChevronRight, Sparkles, Circle, Zap } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { experiences } from '@/lib/data'
-import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Briefcase, Building2, Calendar, ChevronRight, MapPin, Sparkles, Zap } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Experience() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -262,6 +15,25 @@ export default function Experience() {
   })
 
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  type initialPositionType = {
+    x: number;
+    y: number;
+  }
+  const [initialPosition, setInitialPosition] = useState<initialPositionType | null>(null);
+
+  useEffect(() => {
+    // This code now runs only on the client, after the component mounts
+    setInitialPosition({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+    });
+  }, []); // The empty array [] ensures this runs only once
+
+  // Don't render anything on the server or before the initial position is set
+  // if (initialPosition === null) {
+  //   return null;
+  // }
+
 
   return (
     <section id="experience" className="py-24 relative overflow-hidden" ref={containerRef}>
@@ -277,10 +49,16 @@ export default function Experience() {
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-purple-400/40 rounded-full"
-              initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-              }}
+              // initial={{
+              //   x: Math.random() * window?.innerWidth,
+              //   y: Math.random() * window?.innerHeight,
+              // }}
+              // initial={initialPosition}
+              // style={{
+              //   // Set initial position using style to avoid re-triggering animations
+              //   left: initialPosition?.x,
+              //   top: initialPosition?.y,
+              // }}
               animate={{
                 y: [null, -100],
                 opacity: [0, 1, 0],

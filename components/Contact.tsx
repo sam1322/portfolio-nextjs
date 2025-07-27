@@ -1,89 +1,3 @@
-// 'use client'
-
-// import { motion } from 'framer-motion'
-// import { Mail, Github, Linkedin, Send, MessageSquare } from 'lucide-react'
-// import { Button } from '@/components/ui/button'
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-// import { personalInfo } from '@/lib/data'
-
-// export default function Contact() {
-//     return (
-//         <section id="contact" className="py-24 bg-muted/50">
-//             <div className="container mx-auto">
-//                 <motion.div
-//                     initial={{ opacity: 0 }}
-//                     whileInView={{ opacity: 1 }}
-//                     transition={{ duration: 0.5 }}
-//                     viewport={{ once: true }}
-//                     className="space-y-8"
-//                 >
-//                     <div className="text-center space-y-4">
-//                         <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Get In Touch</h2>
-//                         <p className="text-muted-foreground max-w-2xl mx-auto">
-//                             I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
-//                         </p>
-//                     </div>
-
-//                     <div className="max-w-2xl mx-auto">
-//                         <Card>
-//                             <CardHeader className="text-center">
-//                                 <CardTitle className="flex items-center justify-center gap-2">
-//                                     <MessageSquare className="h-5 w-5" />
-//                                     Let's Connect
-//                                 </CardTitle>
-//                                 <CardDescription>
-//                                     Choose your preferred method of communication
-//                                 </CardDescription>
-//                             </CardHeader>
-//                             <CardContent className="space-y-4">
-//                                 <div className="grid gap-4">
-//                                     <Button size="lg" className="w-full" asChild>
-//                                         <a href={`mailto:${personalInfo.email}`}>
-//                                             <Mail className="mr-2 h-5 w-5" />
-//                                             Send me an Email
-//                                         </a>
-//                                     </Button>
-
-//                                     <div className="grid grid-cols-2 gap-4">
-//                                         <Button size="lg" variant="outline" asChild>
-//                                             <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
-//                                                 <Github className="mr-2 h-5 w-5" />
-//                                                 GitHub
-//                                             </a>
-//                                         </Button>
-//                                         <Button size="lg" variant="outline" asChild>
-//                                             <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
-//                                                 <Linkedin className="mr-2 h-5 w-5" />
-//                                                 LinkedIn
-//                                             </a>
-//                                         </Button>
-//                                     </div>
-//                                 </div>
-
-//                                 <div className="relative">
-//                                     <div className="absolute inset-0 flex items-center">
-//                                         <span className="w-full border-t" />
-//                                     </div>
-//                                     <div className="relative flex justify-center text-xs uppercase">
-//                                         <span className="bg-background px-2 text-muted-foreground">Or</span>
-//                                     </div>
-//                                 </div>
-
-//                                 <div className="text-center space-y-2">
-//                                     <p className="text-sm text-muted-foreground">
-//                                         Feel free to reach out directly at
-//                                     </p>
-//                                     <p className="font-mono text-lg">{personalInfo.email}</p>
-//                                 </div>
-//                             </CardContent>
-//                         </Card>
-//                     </div>
-//                 </motion.div>
-//             </div>
-//         </section>
-//     )
-// }
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -132,10 +46,10 @@ export default function Contact() {
                             </Badge>
                         </motion.div>
                         <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                            Let's Work Together
+                            Let&apos;s Work Together
                         </h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Have a project in mind? Let's create something amazing together.
+                            Have a project in mind? Let&apos;s create something amazing together.
                         </p>
                     </div>
 
@@ -155,7 +69,7 @@ export default function Contact() {
                                         Send a Message
                                     </CardTitle>
                                     <CardDescription>
-                                        Fill out the form below and I'll get back to you as soon as possible.
+                                        Fill out the form below and I&apos;ll get back to you as soon as possible.
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="relative space-y-4">
@@ -266,9 +180,9 @@ export default function Contact() {
                             >
                                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 animate-gradient" />
                                 <div className="relative bg-gradient-to-r from-purple-600/90 to-pink-600/90 p-6 text-white text-center">
-                                    <h3 className="text-2xl font-bold mb-2">Let's Build Something Great!</h3>
+                                    <h3 className="text-2xl font-bold mb-2">Let&apos;s Build Something Great!</h3>
                                     <p className="mb-4 text-purple-100">
-                                        I'm always excited to work on new projects and collaborate with amazing people.
+                                        I&apos;m always excited to work on new projects and collaborate with amazing people.
                                     </p>
                                     <div className="flex items-center justify-center gap-2 text-sm">
                                         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />

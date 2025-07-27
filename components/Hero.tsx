@@ -1,118 +1,3 @@
-// 'use client'
-
-// import { motion } from 'framer-motion'
-// import { Github, Linkedin, Mail, MapPin, Download } from 'lucide-react'
-// import { Button } from '@/components/ui/button'
-// import { Badge } from '@/components/ui/badge'
-// import { personalInfo } from '@/lib/data'
-
-// export default function Hero() {
-//     return (
-//         <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
-//             {/* Animated background gradient */}
-//             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-primary/5" />
-
-//             <div className="container relative z-10">
-//                 <motion.div
-//                     initial={{ opacity: 0, y: 20 }}
-//                     animate={{ opacity: 1, y: 0 }}
-//                     transition={{ duration: 0.5 }}
-//                     className="flex flex-col items-center text-center space-y-8"
-//                 >
-//                     <motion.div
-//                         initial={{ scale: 0.5, opacity: 0 }}
-//                         animate={{ scale: 1, opacity: 1 }}
-//                         transition={{ duration: 0.5 }}
-//                         className="relative"
-//                     >
-//                         <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-primary/60 p-1">
-//                             <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-//                                 <span className="text-4xl font-bold text-primary">
-//                                     {personalInfo.name.split(' ').map(n => n[0]).join('')}
-//                                 </span>
-//                             </div>
-//                         </div>
-//                         <Badge className="absolute -bottom-2 left-1 px-3 py-1">
-//                             Available for hire
-//                         </Badge>
-//                     </motion.div>
-
-//                     <div className="space-y-4">
-//                         <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-//                             Hi, I'm <span className="text-primary">{personalInfo.name}</span>
-//                         </h1>
-//                         <h2 className="text-2xl md:text-3xl text-muted-foreground">
-//                             {personalInfo.title}
-//                         </h2>
-//                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-//                             Passionate about building scalable web applications and creating exceptional user experiences
-//                             with modern technologies.
-//                         </p>
-//                     </div>
-
-//                     <div className="flex items-center gap-2 text-muted-foreground">
-//                         <MapPin className="w-4 h-4" />
-//                         <span>{personalInfo.location}</span>
-//                     </div>
-
-//                     <div className="flex flex-wrap items-center justify-center gap-4">
-//                         <Button size="lg" asChild>
-//                             <a href="https://drive.google.com/file/d/1_Buio4KnRnKCYGFfTPxjW7Ts-vZkiDca/view?usp=sharing" download>
-//                                 <Download className="mr-2 h-4 w-4" />
-//                                 Download Resume
-//                             </a>
-//                         </Button>
-//                         <Button size="lg" variant="outline" asChild>
-//                             <a href={`mailto:${personalInfo.email}`}>
-//                                 <Mail className="mr-2 h-4 w-4" />
-//                                 Get in Touch
-//                             </a>
-//                         </Button>
-//                     </div>
-
-//                     <div className="flex items-center gap-4">
-//                         <Button variant="ghost" size="icon" asChild>
-//                             <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
-//                                 <Github className="h-5 w-5" />
-//                             </a>
-//                         </Button>
-//                         <Button variant="ghost" size="icon" asChild>
-//                             <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer">
-//                                 <Linkedin className="h-5 w-5" />
-//                             </a>
-//                         </Button>
-//                     </div>
-//                 </motion.div>
-//             </div>
-
-//             {/* Animated shapes */}
-//             <motion.div
-//                 animate={{
-//                     y: [0, -20, 0],
-//                 }}
-//                 transition={{
-//                     duration: 5,
-//                     repeat: Infinity,
-//                     ease: "easeInOut",
-//                 }}
-//                 className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/10 blur-xl"
-//             />
-//             <motion.div
-//                 animate={{
-//                     y: [0, 20, 0],
-//                 }}
-//                 transition={{
-//                     duration: 7,
-//                     repeat: Infinity,
-//                     ease: "easeInOut",
-//                 }}
-//                 className="absolute bottom-20 right-10 w-32 h-32 rounded-full bg-primary/10 blur-xl"
-//             />
-//         </section>
-//     )
-// }   
-
-
 'use client'
 
 import { motion } from 'framer-motion'
@@ -206,7 +91,7 @@ export default function Hero() {
                             transition={{ delay: 0.2 }}
                             className="text-5xl md:text-7xl font-bold"
                         >
-                            Hi, I'm{' '}
+                            Hi, I&apos;m{' '}
                             <span className="inline-block gradient-text animate-gradient bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600">
                                 {personalInfo.name}
                             </span>
@@ -218,8 +103,8 @@ export default function Hero() {
                             transition={{ delay: 0.3 }}
                             className="flex items-center justify-center gap-2 text-2xl md:text-3xl text-muted-foreground"
                         >
-                            <span>I'm a</span>
-                            <div className="text-foreground font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                            <span>I&apos;m a</span>
+                            <div className=" font-semibold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                                 {personalInfo.title}
                             </div>
                         </motion.div>

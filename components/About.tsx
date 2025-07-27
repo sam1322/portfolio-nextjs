@@ -1,134 +1,10 @@
-// 'use client'
-
-// import { motion } from 'framer-motion'
-// import { GraduationCap, Award, Calendar } from 'lucide-react'
-// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-// import { Badge } from '@/components/ui/badge'
-// import { Separator } from '@/components/ui/separator'
-
-// export default function About() {
-//   return (
-//     <section id="about" className="py-24 bg-muted/50">
-//       <div className="container mx-auto">
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           whileInView={{ opacity: 1 }}
-//           transition={{ duration: 0.5 }}
-//           viewport={{ once: true }}
-//           className="space-y-8"
-//         >
-//           <div className="text-center space-y-4">
-//             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">About Me</h2>
-//             <p className="text-muted-foreground max-w-2xl mx-auto">
-//               Passionate software developer with a knack for creating innovative solutions
-//             </p>
-//           </div>
-
-//           <div className="grid md:grid-cols-2 gap-8 items-start">
-//             <motion.div
-//               initial={{ opacity: 0, x: -20 }}
-//               whileInView={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.5, delay: 0.2 }}
-//               viewport={{ once: true }}
-//               className="space-y-6"
-//             >
-//               <Card>
-//                 <CardHeader>
-//                   <CardTitle>Who I Am</CardTitle>
-//                 </CardHeader>
-//                 <CardContent className="space-y-4">
-//                   <p className="text-muted-foreground">
-//                     I'm a passionate Software Developer with expertise in building scalable web applications 
-//                     and creating exceptional user experiences. With a strong foundation in both frontend and 
-//                     backend technologies, I specialize in developing full-stack solutions that solve real-world problems.
-//                   </p>
-//                   <p className="text-muted-foreground">
-//                     My experience spans from building e-commerce platforms that unify major marketplaces to 
-//                     developing AI-powered applications. I'm particularly interested in distributed systems, 
-//                     real-time applications, and creating intuitive user interfaces.
-//                   </p>
-//                   <p className="text-muted-foreground">
-//                     I'm always eager to learn new technologies and take on challenging projects that push 
-//                     the boundaries of what's possible in web development.
-//                   </p>
-//                 </CardContent>
-//               </Card>
-//             </motion.div>
-
-//             <motion.div
-//               initial={{ opacity: 0, x: 20 }}
-//               whileInView={{ opacity: 1, x: 0 }}
-//               transition={{ duration: 0.5, delay: 0.3 }}
-//               viewport={{ once: true }}
-//             >
-//               <Card>
-//                 <CardHeader>
-//                   <CardTitle className="flex items-center gap-2">
-//                     <GraduationCap className="h-5 w-5" />
-//                     Education
-//                   </CardTitle>
-//                 </CardHeader>
-//                 <CardContent>
-//                   <div className="space-y-4">
-//                     <div>
-//                       <h4 className="font-semibold">Bachelor of Engineering</h4>
-//                       <p className="text-sm text-muted-foreground">Information Technology</p>
-//                     </div>
-//                     <Separator />
-//                     <div className="space-y-2">
-//                       <div className="flex items-center justify-between">
-//                         <span className="text-sm">Netaji Subhash University of Technology</span>
-//                       </div>
-//                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
-//                         <Calendar className="h-4 w-4" />
-//                         Aug 2018 - April 2022
-//                       </div>
-//                       <div className="flex items-center gap-2">
-//                         <Award className="h-4 w-4" />
-//                         <Badge variant="secondary">GPA: 7.8 / 10.0</Badge>
-//                       </div>
-//                       <p className="text-sm text-muted-foreground">Delhi, Delhi</p>
-//                     </div>
-//                   </div>
-//                 </CardContent>
-//               </Card>
-
-//               <Card className="mt-6">
-//                 <CardHeader>
-//                   <CardTitle>Quick Facts</CardTitle>
-//                 </CardHeader>
-//                 <CardContent>
-//                   <div className="space-y-3">
-//                     <div className="flex items-center justify-between">
-//                       <span className="text-sm text-muted-foreground">Experience</span>
-//                       <Badge>3+ Years</Badge>
-//                     </div>
-//                     <div className="flex items-center justify-between">
-//                       <span className="text-sm text-muted-foreground">Projects</span>
-//                       <Badge>10+ Completed</Badge>
-//                     </div>
-//                     <div className="flex items-center justify-between">
-//                       <span className="text-sm text-muted-foreground">Technologies</span>
-//                       <Badge>20+ Mastered</Badge>
-//                     </div>
-//                   </div>
-//                 </CardContent>
-//               </Card>
-//             </motion.div>
-//           </div>
-//         </motion.div>
-//       </div>
-//     </section>
-//   )
-// }
-
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { GraduationCap, Award, Calendar, Star, Target, Heart, Zap } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Award, Calendar, GraduationCap, Heart, Star } from 'lucide-react'
 import { useRef } from 'react'
 
 export default function About() {
@@ -144,7 +20,7 @@ export default function About() {
     <section id="about" className="py-24 relative overflow-hidden" ref={ref}>
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-purple-950/20 dark:via-pink-950/20 dark:to-blue-950/20" />
-      
+
       {/* Floating shapes */}
       <motion.div
         style={{ y }}
@@ -203,17 +79,17 @@ export default function About() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
-                    I'm a passionate Software Developer with a love for creating elegant solutions 
-                    to complex problems. My journey in tech started with curiosity and has evolved 
+                    I&apos;m a passionate Software Developer with a love for creating elegant solutions
+                    to complex problems. My journey in tech started with curiosity and has evolved
                     into a career focused on building impactful applications.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    With expertise spanning from e-commerce platforms to AI-powered applications, 
-                    I thrive on challenges that push the boundaries of what's possible. I believe 
+                    With expertise spanning from e-commerce platforms to AI-powered applications,
+                    I thrive on challenges that push the boundaries of what&apos;s possible. I believe
                     in writing clean, maintainable code that not only works but tells a story.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    When I'm not coding, you'll find me exploring new technologies, contributing 
+                    When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing
                     to open source, or sharing knowledge with the developer community.
                   </p>
                 </CardContent>

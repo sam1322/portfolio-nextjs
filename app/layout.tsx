@@ -47,6 +47,7 @@ export const metadata: Metadata = {
 
 
 import './globals.css'
+import { cn } from '@/lib/utils'
 
 export default function RootLayout({
   children,
@@ -55,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={cn(inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

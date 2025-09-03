@@ -53,16 +53,15 @@ export default function Contact() {
                         </p>
                     </div>
 
-                    <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div className="max-w-3xl mx-auto flex gap-8 justify-center">
                         {/* Contact form */}
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                         >
                             <Card className="h-full border-2 hover:border-purple-200 transition-colors duration-300 overflow-hidden group">
-                                {/* <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-blue-500/0 group-hover:from-purple-500/5 group-hover:via-pink-500/5 group-hover:to-blue-500/5 transition-all duration-500" /> */}
                                 <CardHeader className="relative">
                                     <CardTitle className="text-2xl flex items-center gap-2">
                                         <Send className="w-6 h-6 text-purple-600" />
@@ -100,7 +99,7 @@ export default function Contact() {
                                     </Button>
                                 </CardContent>
                             </Card>
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* Contact info */}
                         <motion.div

@@ -84,7 +84,7 @@ export const experiences = [
 // ]
 
 type ProjectType = {
-  id: number;
+  // id: number;
   title: string;
   description: string;
   image: string;
@@ -96,7 +96,23 @@ type ProjectType = {
 }
 export const projects: ProjectType[] = [
   {
-    id: 1,
+    title: "AI Video Generator",
+    description: "Transform text prompts into stunning AI-generated videos using cutting-edge machine learning models. Create cinematic scenes, animations, and visual stories in seconds.",
+    image: "https://res.cloudinary.com/dw5xqmxyu/image/upload/v1755846072/Create-Next-App-08-22-2025_12_28_PM_qiqpu5.png", // Add your project images
+    techStack: ["Next.js", "Nest.js", "AI/ML", "Prisma", "TypeScript", "Kakfa"],
+    live: "https://project.sam-tech.xyz/ai-video-gen",
+    // live: "/ai-video-gen",
+    github: "https://github.com/sam1322/price-tracker-frontend", // there is also a frontend github
+    highlights: [
+      "Architected a full-stack AI video generation platform using Next.js, NestJS, and Kafka to create short-form content from user prompts.",
+      "Integrated Gemini API to dynamically generate video scripts and scenes from natural language prompts, enabling automated content creation workﬂow.",
+      "Implemented fault-tolerant processing pipeline with transactional outbox pattern and Kafka workers that fetch, composite (FFmpeg), and store ﬁnal videos, ensuring zero message loss and asynchronous job handling at scale.",
+      "Designed a scalable data architecture with Prisma/PostgreSQL for metadata and Azure Blob Storage for eﬃcient management of generated media assets."
+    ],
+    color: "from-purple-600 to-pink-600",
+    // date: "2025"
+  },
+  {
     title: "E-commerce Price Tracker",
     description: "Full-stack price comparison tool that tracks product prices across Amazon and Flipkart",
     image: "https://res.cloudinary.com/dw5xqmxyu/image/upload/v1753635211/Create-Next-App-07-24-2025_05_24_PM-1_bsei6n.png", // Add your project image
@@ -107,11 +123,10 @@ export const projects: ProjectType[] = [
       "Developed real-time price drop notification system and data visualization dashboard with interactive charts showing price trends over time"
     ],
     github: "https://github.com/sam1322/price-tracker-backend",
-    // live: "https://price-tracker-demo.com",
+    live: "https://project.sam-tech.xyz/price-tracker",
     color: "from-purple-600 to-blue-600"
   },
   {
-    id: 2,
     title: "Twitch Clone",
     description: "Full-featured streaming platform with live video broadcasting and real-time chat",
     image: "https://res.cloudinary.com/dw5xqmxyu/image/upload/v1753635192/327942574-9419582f-e037-4532-921d-6c73ebe7d610_resr5g.png", // Add your project image
@@ -123,11 +138,10 @@ export const projects: ProjectType[] = [
       "Implemented real-time live chat functionality using WebSockets, enabling interactive user engagement during live streams."
     ],
     github: "https://github.com/sam1322/twitch-clone-frontend",
-    // live: "https://twitch-clone-frontend-private.vercel.app/",
+    live: "https://twitch-clone-frontend-private.vercel.app/",
     color: "from-pink-600 to-purple-600"
   },
   {
-    id: 3,
     title: "Reddit Clone",
     description: "Full-stack Reddit clone with server-side rendering and secure authentication",
     image: "https://res.cloudinary.com/dw5xqmxyu/image/upload/v1753635311/homepage_xobxmj.png",

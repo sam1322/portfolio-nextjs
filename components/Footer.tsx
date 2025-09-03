@@ -33,7 +33,7 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="relative border-t bg-gradient-to-b from-background to-muted/50"
+      className="relative border-t bg-gradient-to-b from-background to-muted/50 mx-4 md:mx-0"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">

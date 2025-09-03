@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className=''>
+      <main className='mx-4 md:mx-0'>
         <Hero />
         <About />
         <Experience />
